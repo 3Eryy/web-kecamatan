@@ -1,8 +1,21 @@
 import { Building, Menu, X } from "lucide-react"
 import { useState } from "react";
+import axios from "axios";
+import { API_URL, getToken } from "../utils/helper";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    function handleLogout () {
+        axios.post(`${API_URL}/logout`, {}, {headers : {Authorization : `Bearer ${getToken()}`}})
+        .then(() => {
+            localStorage.clear()
+            window.location.reload()
+        })
+        .catch((err) => {
+            console.log(err.response);
+        })
+    }
     
   return (
     <header className="bg-blue-900 text-white shadow-lg fixed w-full">
@@ -22,6 +35,7 @@ const Navbar = () => {
                     <a href="#layanan" className="hover:text-blue-200 transition-colors">Layanan</a>
                     <a href="#berita" className="hover:text-blue-200 transition-colors">Berita</a>
                     <a href="#kontak" className="hover:text-blue-200 transition-colors">Kontak</a>
+                    <p onClick={handleLogout} className="bg-red-600 px-2 py-1 rounded text-white cursor-pointer hover:bg-red-800 hover:text-red-200 transition-colors" >Logout</p>
                 </nav>
 
                 <button
