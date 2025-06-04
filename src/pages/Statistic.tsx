@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Statistic = () => {
   return (
     <section className="py-16 bg-blue-900 text-white">

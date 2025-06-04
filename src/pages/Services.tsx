@@ -1,9 +1,5 @@
 import { ChevronRight, FileText, Globe, Heart, Shield } from 'lucide-react';
-import React, { useState } from 'react'
-
 const Services = () => {
-
-    const [activeService, setActiveService] = useState(0);
 
     const services = [
         {
@@ -47,7 +43,6 @@ const Services = () => {
                     <div
                         key={index}
                         className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer transform hover:scale-105"
-                        onClick={() => setActiveService(index)}
                     >
                         <div className="text-blue-600 mb-4">{service.icon}</div>
                         <h4 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h4>

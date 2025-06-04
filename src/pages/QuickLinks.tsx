@@ -1,5 +1,5 @@
 import { Send, X } from 'lucide-react';
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 const QuickLinks = () => {
 
@@ -19,7 +19,7 @@ const QuickLinks = () => {
         setFormData({ email: '', message: '' });
     };
 
-    const handleLinkClick = (link) => {
+    const handleLinkClick = (link : any) => {
         if (link === "Formulir Pengaduan") {
             setIsModalOpen(true);
         } else {
@@ -28,7 +28,7 @@ const QuickLinks = () => {
         }
     };
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e : any) => {
         const { name, value } = e.target;
         setFormData(prev => ({
             ...prev,
@@ -36,7 +36,7 @@ const QuickLinks = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e : any) => {
         e.preventDefault();
         if (formData.email && formData.message) {
             console.log('Form submitted:', formData);
