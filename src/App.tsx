@@ -17,7 +17,6 @@ export default function GovernmentLanding() {
             {/* Hero Section */}
             <HeroSection />
 
-
             {/* Quick Links */}
             <QuickLinks />
 

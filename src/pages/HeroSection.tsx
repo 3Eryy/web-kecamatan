@@ -2,8 +2,8 @@ import { Search } from 'lucide-react'
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
-        <div className="container mx-auto px-4 py-20">
+    <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white" id='beranda'>
+        <div className="container mx-auto px-4 py-33">
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-5xl font-bold mb-6">
                     Membangun Masa Depan yang Lebih Baik

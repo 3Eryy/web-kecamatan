@@ -25,7 +25,7 @@ const News = () => {
     ];
     
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" id='berita'>
         <div className="container mx-auto px-4">
             <div className="flex justify-between items-center mb-12">
                 <div>
