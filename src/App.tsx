@@ -7,7 +7,7 @@ import Statistic from './pages/Statistic';
 import News from './pages/News';
 import Contact from './pages/Contact';
 
-export default function GovernmentLanding() {
+export default function App() {
 
     return (
         <div className="min-h-screen bg-gray-50">
